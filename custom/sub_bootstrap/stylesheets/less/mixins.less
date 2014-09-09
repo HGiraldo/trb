@@ -1,0 +1,40 @@
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+.rotate(@rotate:5deg) {
+  -webkit-transform: rotate(@rotate);
+  -moz-transform: rotate(@rotate);
+  -o-transform: rotate(@rotate);
+}
+.line_gradient(@color_1:#F6C25A, @color_2:#00D3A2) {
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@color_1), to(@color_2));
+  background-image: -webkit-linear-gradient(left, @color_1, @color_2);
+  background-image: -moz-linear-gradient(left, @color_1, @color_2);
+  background-image: -o-linear-gradient(left, @color_1, @color_2);
+}
+.animation-direction(@param1) {
+  animation-direction: @param1;
+  -moz-animation-direction: @param1;
+  -webkit-animation-direction: @param1;
+  -o-animation-direction: @param1;
+}
+
+.animation-menu(@param1) {
+  background: url("../images/@{param1}") no-repeat 11% 50%;
+  :hover {
+    background: url("../images/@{param1}") no-repeat 11% 50%;
+  }
+}
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    font-family: 'proxima_novalight';
+  }
+  &::-moz-placeholder {
+    color: @color;
+    font-family: 'proxima_novalight';
+  }
+}

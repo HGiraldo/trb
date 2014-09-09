@@ -1,0 +1,102 @@
+footer.footer {
+  font-size: 12px;
+  max-width: 100%;
+  min-height: 72px;
+  max-height: 72px;
+  background-color: #001e48;
+  border: none;
+  border-top: 5px solid #ccd900;
+  margin: 0;
+  padding: 10px;
+}
+footer.footer .region {
+  width: 1024px;
+  margin: 0 auto;
+}
+.block.rb-phone {
+  width: 50%;
+  float: left;
+  left: 5%;
+}
+.block.rb-phone .ico-tel {
+  float: left;
+  width: 70px;
+}
+.block.rb-phone .ico-tel svg {
+  fill: #ccd900;
+  width: 50px;
+  height: 40px;
+}
+.block.rb-phone .ico-tel svg:hover {
+  fill: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.block.rb-phone .phone-number {
+  float: left;
+}
+.block.rb-phone .phone-number a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2.4em;
+}
+.block.rb-phone .phone-number a:hover {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: #b3b3b3;
+}
+.block.rb-social {
+  float: right;
+  text-align: right;
+  width: 30%;
+  right: 5%;
+}
+.block.rb-social .block-content .text {
+  color: #ffffff;
+  font-size: 2em;
+  float: right;
+  padding-top: 3px;
+}
+.block.rb-social .block-content .icons {
+  float: right;
+}
+.block.rb-social .block-content .icons svg {
+  width: 50px;
+  height: 40px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .block.rb-social span {
+    margin: 0 5px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px;) {
+  .block.rb-social span {
+    margin: 0 10px !important;
+  }
+}
+.block.rb-social a #facebooksvg,
+.block.rb-social a #twittersvg,
+.block.rb-social a #linkedinsvg,
+.block.rb-social a #vimeosvg {
+  fill: #ccd900;
+  padding: 0 2px 0 2px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.block.rb-social a:hover #facebooksvg,
+.block.rb-social a:hover #twittersvg,
+.block.rb-social a:hover #linkedinsvg,
+.block.rb-social a:hover #vimeosvg {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  fill: #ffffff;
+}
