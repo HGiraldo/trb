@@ -96,39 +96,8 @@ li {
     float: left;
   }
 }
-// NOTICIAS.
-.view.view-id-rbaldia.al-dia-block, .view.asi-hablando-block {
-  margin-top: 4%;
-  .views-row {
-    margin: 1% 0 1% 0;
-    float: left;
-    display: block;
-    min-height: 130px;
-    max-height: 130px;
-    overflow: hidden;
-    .content-image {
-      float: left;
-      width: 20%;
-    }
-    .content-wrapper-right {
-      float: left;
-      padding-left: 3%;
-      padding-right: 3%;
-      width: 80%;
-      h2 {
-        margin: 0;
-        padding: 0;
-      }
-      .title {
-        text-decoration: underline;
-      }
-      .date {
-        font-style: italic;
-        color: @DateColor;
-      }
-    }
-  }
-}
+
+
 // NODOS.
 body.page-node {
   .field-name-field-image {
@@ -138,22 +107,39 @@ body.page-node {
     padding-top: 3%;
   }
 }
-// SOCIALES.
-.view.view-sociales {
-  .view-content {
-    .views-row {
-      list-style: none;
-      width: 50%;
-      float: left;
-      padding: 2% 5% 2% 5%;
-      text-align: center;
-    }
-    .views-field-title {
-      background: @GrisBody;
-      color: @Azul;
-      font-size: 1.6em;
-      padding: 2% 0 2% 0;
-      width: 321px;
-    }
+
+// LINK DE DESCARGA.
+a.rb-download-link {
+  .transition(0.5s);
+  float: left;
+  padding: 14px;
+  width: 58%;
+  background: url('../images/download.png') no-repeat scroll 98% center @Azul;
+  margin: 10px 5px 0 0;
+  height: 50px;
+  background-color: @Azul;
+  color: @Verde;
+  text-transform: uppercase;
+  &:hover {
+    background: url('../images/download_h.png') no-repeat scroll 98% center @Verde;
+    color: @Azul;
+  }
+}
+// LINK EXTERNO.
+a.rb-external-link {
+  .transition(0.5s);
+  float: left;
+  padding: 14px;
+  width: 58%;
+  background: url('../images/more.png') no-repeat scroll 98% center @Azul;
+  margin: 10px 5px 0 0;
+  height: 50px;
+  background-color: @Azul;
+  color: @Verde;
+  text-transform: uppercase;
+  &:hover {
+    background: url('../images/more.png') no-repeat scroll 98% center @Azul;
+    color: @Azul;
+    background-color: @Verde;
   }
 }

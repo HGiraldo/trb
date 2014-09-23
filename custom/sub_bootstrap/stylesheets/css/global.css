@@ -93,59 +93,45 @@ li {
   width: 100%;
   float: left;
 }
-.view.view-id-rbaldia.al-dia-block,
-.view.asi-hablando-block {
-  margin-top: 4%;
-}
-.view.view-id-rbaldia.al-dia-block .views-row,
-.view.asi-hablando-block .views-row {
-  margin: 1% 0 1% 0;
-  float: left;
-  display: block;
-  min-height: 130px;
-  max-height: 130px;
-  overflow: hidden;
-}
-.view.view-id-rbaldia.al-dia-block .views-row .content-image,
-.view.asi-hablando-block .views-row .content-image {
-  float: left;
-  width: 20%;
-}
-.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right,
-.view.asi-hablando-block .views-row .content-wrapper-right {
-  float: left;
-  padding-left: 3%;
-  padding-right: 3%;
-  width: 80%;
-}
-.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right h2,
-.view.asi-hablando-block .views-row .content-wrapper-right h2 {
-  margin: 0;
-  padding: 0;
-}
-.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right .title,
-.view.asi-hablando-block .views-row .content-wrapper-right .title {
-  text-decoration: underline;
-}
-.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right .date,
-.view.asi-hablando-block .views-row .content-wrapper-right .date {
-  font-style: italic;
-  color: #b9b9b9;
-}
 body.page-node .field-name-body {
   padding-top: 3%;
 }
-.view.view-sociales .view-content .views-row {
-  list-style: none;
-  width: 50%;
+a.rb-download-link {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   float: left;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
+  padding: 14px;
+  width: 58%;
+  background: url('../images/download.png') no-repeat scroll 98% center #001e48;
+  margin: 10px 5px 0 0;
+  height: 50px;
+  background-color: #001e48;
+  color: #ccd900;
+  text-transform: uppercase;
 }
-.view.view-sociales .view-content .views-field-title {
-  background: #ededed;
+a.rb-download-link:hover {
+  background: url('../images/download_h.png') no-repeat scroll 98% center #ccd900;
   color: #001e48;
-  font-size: 1.6em;
-  padding: 2% 0 2% 0;
-  width: 321px;
+}
+a.rb-external-link {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  float: left;
+  padding: 14px;
+  width: 58%;
+  background: url('../images/more.png') no-repeat scroll 98% center #001e48;
+  margin: 10px 5px 0 0;
+  height: 50px;
+  background-color: #001e48;
+  color: #ccd900;
+  text-transform: uppercase;
+}
+a.rb-external-link:hover {
+  background: url('../images/more.png') no-repeat scroll 98% center #001e48;
+  color: #001e48;
+  background-color: #ccd900;
 }

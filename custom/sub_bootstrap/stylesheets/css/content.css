@@ -5900,13 +5900,26 @@ section.block-menu li > a.asi-vamos :hover {
 }
 section.block-menu#block-system-main-menu {
   border-bottom: 1px solid #b4d5e2;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+section.block-menu .block-content li {
+  margin: 0;
 }
 section.block-menu .block-content li a,
 section.block-menu .block-content li span.nolink {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   padding-left: 23%;
   font-family: 'proxima_nova_rgregular';
+  color: #001e48;
+}
+section.block-menu .block-content li a:hover,
+section.block-menu .block-content li span.nolink:hover {
+  background-color: #c6d5df;
+}
+section.block-menu .block-content li a.menu-parent.active-trail,
+section.block-menu .block-content li span.nolink.menu-parent.active-trail {
+  font-family: 'proxima_nova_rgbold';
 }
 section.block-menu .block-content li span.nolink {
   padding: 10px 15px;
@@ -5914,18 +5927,16 @@ section.block-menu .block-content li span.nolink {
   position: relative;
   display: block;
   cursor: pointer;
-}
-section.block-menu .block-content li :hover {
-  background-color: #c6d5df;
+  color: #001e48;
 }
 section.block-menu .block-content li.expanded .menu.nav {
   display: none;
 }
-section.block-menu .block-content li.active-trail {
-  background-color: #c6d5df;
-}
-section.block-menu .block-content li.active-trail .menu.nav {
+section.block-menu .block-content li.expanded.active-trail .menu.nav {
   display: block;
+}
+section.block-menu .block-content li.expanded.active-trail .menu.nav a.active {
+  background-color: #c6d5df;
 }
 section.block-menu .block-content li span.menu-parent:after {
   content: url('../images/flecha-desplegar.png');
@@ -5936,6 +5947,42 @@ section.block-menu .block-content li.rb-menu-proccesed span.menu-parent:after {
   content: url('../images/flecha-desplegar_2.png');
   right: 20%;
   position: absolute;
+}
+section.block-menu .block-content li.expanded ul.menu.nav li a {
+  background: url('../images/circulo-menu.png') no-repeat scroll 15% center transparent;
+}
+section.block-menu#block-menu-menu-otrasareas li.expanded ul.menu.nav li a {
+  background: url('../images/circulo-menu.png') no-repeat scroll 3% center transparent;
+  font-size: 14px;
+}
+section.block-menu#block-menu-menu-otrasareas li.expanded ul.menu.nav li a.active-trail.active {
+  background-color: #c6d5df;
+}
+section.block-menu#block-menu-menu-otrasareas .parent-level-2 ul.menu.nav li a {
+  background: url('../images/cuadro.png') no-repeat scroll 5% center transparent !important;
+}
+section.block-menu#block-menu-menu-otrasareas .parent-level-2 ul.menu.nav li a.active-trail.active {
+  background-color: #c6d5df !important;
+}
+section.block-menu#block-menu-menu-otrasareas a.active-trail.active {
+  background-color: #c6d5df;
+  font-family: 'proxima_nova_rgbold';
+}
+section.block-menu#block-menu-menu-otrasareas .expanded.active-trail a.active-trail.active {
+  font-family: 'proxima_nova_rgregular';
+}
+section.block-menu#block-menu-menu-otrasareas h2 {
+  font-size: 18px;
+  font-family: 'proxima_nova_rgbold';
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-left: 10%;
+  margin-top: 53px;
+}
+section.block-menu#block-menu-menu-otrasareas .block-content li a,
+section.block-menu#block-menu-menu-otrasareas .block-content li span.nolink {
+  padding-left: 10%;
 }
 body.front h1.page-header {
   display: none;
@@ -5954,7 +6001,7 @@ body.front a.more-news {
   text-align: center;
   position: absolute;
   right: 0;
-  top: 59.5%;
+  top: 27.9%;
   border-left: 1px solid #889d00;
 }
 body.front a.more-news:hover,
@@ -5965,9 +6012,13 @@ body.front a.more-news.active {
   transition: all 0.5s ease-out;
   background-color: #889d00;
 }
+body.front a.more-news.more-ico {
+  background: url('../images/more_h.png') no-repeat scroll 90% center #ccd900;
+}
 body.front div.last-text {
-  font-size: 2em;
+  font-size: 28px;
   padding: 2%;
+  color: #000000;
 }
 body.front .views-field.views-field-title {
   position: absolute;
@@ -6015,6 +6066,85 @@ body.front .views-slideshow-controls-bottom .views_slideshow_pager_field_item.ac
   border-right: 20px solid transparent;
   border-top: 10px solid #001e48;
   padding-top: 0.5%;
+}
+#block-views-news-home-block {
+  margin-bottom: 5%;
+}
+.block.home-programas,
+.block.home-convocatorias,
+.block.home-salud {
+  float: left;
+  display: block;
+  width: 100%;
+}
+.block.home-programas .block-content .image-content,
+.block.home-convocatorias .block-content .image-content,
+.block.home-salud .block-content .image-content,
+.block.home-programas .block-content .wrapper,
+.block.home-convocatorias .block-content .wrapper,
+.block.home-salud .block-content .wrapper {
+  float: left;
+  width: 50%;
+}
+.block.home-programas .block-content .wrapper .title,
+.block.home-convocatorias .block-content .wrapper .title,
+.block.home-salud .block-content .wrapper .title,
+.block.home-programas .block-content .wrapper .text,
+.block.home-convocatorias .block-content .wrapper .text,
+.block.home-salud .block-content .wrapper .text,
+.block.home-programas .block-content .wrapper .link,
+.block.home-convocatorias .block-content .wrapper .link,
+.block.home-salud .block-content .wrapper .link {
+  padding-left: 3%;
+}
+.block.home-programas .block-content .wrapper .title,
+.block.home-convocatorias .block-content .wrapper .title,
+.block.home-salud .block-content .wrapper .title {
+  font-family: 'proxima_nova_rgbold';
+  font-size: 26px;
+}
+.block.home-programas .block-content .wrapper .text,
+.block.home-convocatorias .block-content .wrapper .text,
+.block.home-salud .block-content .wrapper .text,
+.block.home-programas .block-content .wrapper .link,
+.block.home-convocatorias .block-content .wrapper .link,
+.block.home-salud .block-content .wrapper .link {
+  padding-top: 5%;
+}
+.block.home-programas .block-content .wrapper .title,
+.block.home-convocatorias .block-content .wrapper .title,
+.block.home-salud .block-content .wrapper .title {
+  font-size: 16px;
+}
+.block.home-programas .block-content .wrapper .link,
+.block.home-convocatorias .block-content .wrapper .link,
+.block.home-salud .block-content .wrapper .link {
+  font-family: 'proxima_nova_rgbold';
+  font-size: 13px;
+}
+.block.home-programas.right-left,
+.block.home-convocatorias.right-left,
+.block.home-salud.right-left {
+  background-color: #dfeaf0;
+}
+.block.home-programas.left-right,
+.block.home-convocatorias.left-right,
+.block.home-salud.left-right {
+  background-color: #ffffff;
+}
+.block.home-programas a.rb-external-link,
+.block.home-convocatorias a.rb-external-link,
+.block.home-salud a.rb-external-link {
+  width: 45%;
+  height: 45px;
+  background: url('../images/more.png') no-repeat scroll 90% center #001e48;
+}
+.block.home-programas a.rb-external-link:hover,
+.block.home-convocatorias a.rb-external-link:hover,
+.block.home-salud a.rb-external-link:hover {
+  background: url('../images/more.png') no-repeat scroll 90% center #001e48;
+  color: #001e48;
+  background-color: #ccd900;
 }
 body.not-logged-in.page-user-login,
 body.not-logged-in.page-user-password,
@@ -6185,4 +6315,304 @@ body.not-logged-in.page-user-register form.rb-proccesed .btn-link {
   margin-top: 7%;
   font-size: 1em;
   font-family: 'proxima_novalight';
+}
+body.node-type-gallery .album-tumbnails {
+  width: 100%;
+  clear: both;
+}
+body.node-type-gallery .album-tumbnails .tumbnail-item {
+  float: left;
+  display: block;
+  padding: 9px;
+}
+body.page-album .download-image {
+  float: right;
+  width: 100%;
+}
+body.page-album .download-image a {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  float: right;
+  background: url('../images/download.png') no-repeat scroll right center transparent;
+  padding-right: 20px;
+  margin: 10px 5px 0 0;
+}
+body.page-album .download-image a:hover {
+  background: url('../images/download_h.png') no-repeat scroll right center transparent;
+  color: #001e48;
+}
+body.page-biblioteca-descargable-presentaciones h1.page-header,
+body.page-biblioteca-descargable-plantillas h1.page-header,
+body.page-biblioteca-descargable-imagenes h1.page-header,
+body.page-biblioteca-descargable-formatos h1.page-header {
+  padding-left: 5%;
+  margin: 0;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository {
+  width: 100%;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row {
+  float: left;
+  width: 50%;
+  list-style: none;
+  padding: 2%;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row .body,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row .body,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row .body,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row .body {
+  font-size: 16px;
+  color: #001e48;
+  font-family: 'proxima_nova_rgregular';
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row h2,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row h2,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row h2,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row h2 {
+  font-size: 18px;
+  font-family: 'proxima_nova_rgbold';
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file {
+  float: left;
+  background-color: #eeeeee;
+  padding: 5px;
+  min-height: 160px;
+  max-height: 160px;
+  overflow: hidden;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .title,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .title,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .title,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .title {
+  min-height: 50px;
+  max-height: 50px;
+  overflow: hidden;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file h2,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file h2,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file h2,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file h2 {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body {
+  min-height: 75px;
+  max-height: 75px;
+  overflow: hidden;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body p,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body p,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body p,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row span.field-content.wrapper-info-file .body p {
+  margin: 0;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row a.download-link,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row a.download-link,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row a.download-link,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row a.download-link {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  float: right;
+  background: url('../images/download.png') no-repeat scroll right center transparent;
+  padding-right: 20px;
+  margin: 10px 5px 0 0;
+}
+body.page-biblioteca-descargable-presentaciones .view-id-biblioteca-repository li.views-row a.download-link:hover,
+body.page-biblioteca-descargable-plantillas .view-id-biblioteca-repository li.views-row a.download-link:hover,
+body.page-biblioteca-descargable-imagenes .view-id-biblioteca-repository li.views-row a.download-link:hover,
+body.page-biblioteca-descargable-formatos .view-id-biblioteca-repository li.views-row a.download-link:hover {
+  background: url('../images/download_h.png') no-repeat scroll right center transparent;
+  color: #001e48;
+}
+body.page-sociales h1.page-header {
+  padding-left: 5%;
+  margin: 0;
+}
+body.page-sociales .view.view-sociales .view-content {
+  width: 100%;
+}
+body.page-sociales .view.view-sociales .view-content li.views-row {
+  float: left;
+  width: 50%;
+  list-style: none;
+  padding: 2%;
+}
+body.page-sociales .view.view-sociales .view-content .views-field-title {
+  background: #eeeeee;
+  font-size: 1.6em;
+  padding: 2% 0 2% 0;
+  width: 100%;
+  text-align: center;
+  min-height: 65px;
+  max-height: 65px;
+}
+body.page-sociales .view.view-sociales .view-content .views-field-title a {
+  vertical-align: middle;
+  color: #001e48;
+}
+body.page-directorio #rb-directory .data {
+  float: left;
+  width: 100%;
+}
+body.page-directorio #rb-directory .data ul.list {
+  padding: 0;
+}
+body.page-directorio #rb-directory .data .item-ficha {
+  list-style: none;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 0;
+  margin: 0;
+}
+body.page-directorio #rb-directory .data .item-ficha .name,
+body.page-directorio #rb-directory .data .item-ficha .cargo,
+body.page-directorio #rb-directory .data .item-ficha .ext,
+body.page-directorio #rb-directory .data .item-ficha .mail {
+  float: left;
+  width: 30%;
+  font-size: 15px;
+  color: #001e48;
+  max-height: 50px;
+  min-height: 50px;
+  padding: 10px;
+  overflow: hidden;
+}
+body.page-directorio #rb-directory .data .item-ficha .ext {
+  width: 10%;
+}
+body.page-directorio #rb-directory .data .item-ficha .name,
+body.page-directorio #rb-directory .data .item-ficha .cargo,
+body.page-directorio #rb-directory .data .item-ficha .ext {
+  border-right: 1px solid #DDDDDD;
+}
+body.page-directorio #rb-directory .data .item-ficha.even {
+  background-color: #eeeeee;
+}
+body.page-directorio #rb-directory .data .item-ficha.odd {
+  background-color: #ffffff;
+}
+body.page-directorio #rb-directory .actions {
+  float: left;
+  width: 100%;
+  padding: 5% 0;
+}
+body.page-directorio #rb-directory .list-header {
+  float: left;
+  width: 100%;
+  background-color: #001e48;
+  height: 55px;
+}
+body.page-directorio #rb-directory .list-header .header-item {
+  float: left;
+  text-align: left;
+  padding: 10px;
+}
+body.page-directorio #rb-directory .list-header .header-item.h-name,
+body.page-directorio #rb-directory .list-header .header-item.h-cargo,
+body.page-directorio #rb-directory .list-header .header-item.h-mail {
+  width: 30%;
+}
+body.page-directorio #rb-directory .list-header .header-item.h-ext {
+  width: 10%;
+}
+body.page-directorio #rb-directory .list-header .header-item button {
+  color: #ffffff;
+}
+body.page-directorio input {
+  background-color: #ffffff;
+  height: 55px;
+  width: 100%;
+  border: 1px solid #eeeeee;
+  color: #001e48;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+body.page-directorio input::-webkit-input-placeholder {
+  color: 14%;
+  font-family: 'proxima_novalight';
+}
+body.page-directorio input::-moz-placeholder {
+  color: 14%;
+  font-family: 'proxima_novalight';
+}
+body.page-directorio input.error {
+  border: 1px solid #ff5757;
+}
+.view.view-id-rbaldia.al-dia-block,
+.view.asi-hablando-block {
+  margin-top: 4%;
+}
+.view.view-id-rbaldia.al-dia-block .views-row,
+.view.asi-hablando-block .views-row {
+  margin: 1% 0 4% 0;
+  float: left;
+  display: block;
+  min-height: 130px;
+  max-height: 130px;
+  overflow: hidden;
+}
+.view.view-id-rbaldia.al-dia-block .views-row .content-image,
+.view.asi-hablando-block .views-row .content-image {
+  float: left;
+  padding-right: 2%;
+}
+.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right h2,
+.view.asi-hablando-block .views-row .content-wrapper-right h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'proxima_nova_rgbold';
+  font-size: 19px;
+}
+.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right h2 a,
+.view.asi-hablando-block .views-row .content-wrapper-right h2 a {
+  color: #001e48;
+}
+.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right .title,
+.view.asi-hablando-block .views-row .content-wrapper-right .title {
+  text-decoration: underline;
+}
+.view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right .date,
+.view.asi-hablando-block .views-row .content-wrapper-right .date {
+  font-style: italic;
+  color: #b9b9b9;
+  font-size: 15px;
+  font-family: 'proxima_novalight';
+}
+.view-id-rbaldia.view-display-id-page .content-wrapper-fixed,
+.view-asi-se-esta-hablando.view-display-id-page .content-wrapper-fixed {
+  position: absolute;
+  top: 38%;
+  left: 10%;
+}
+.view-id-rbaldia.view-display-id-page .content-wrapper-fixed .title a,
+.view-asi-se-esta-hablando.view-display-id-page .content-wrapper-fixed .title a {
+  font-family: 'proxima_nova_rgbold';
+  font-size: 34px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px black;
+}
+.view-id-rbaldia.view-display-id-page .content-wrapper-fixed .date,
+.view-asi-se-esta-hablando.view-display-id-page .content-wrapper-fixed .date {
+  font-style: italic;
+  color: #b9b9b9;
+  font-size: 15px;
+  font-family: 'proxima_novalight';
+  text-shadow: 1px 1px 3px black;
 }

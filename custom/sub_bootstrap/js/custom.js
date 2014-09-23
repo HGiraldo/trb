@@ -4,8 +4,21 @@
 
   Drupal.behaviors.custom = {
     attach:function(context, settings) {
+      // LIST-DIRECTORY
+      $('#rb-directory').once('directory', function() {
+        var options = {
+          valueNames: [ 'name', 'cargo', 'ext', 'mail' ]
+        };
+        var userList = new List('rb-directory', options);
+      });
+
       // BARRA LATERAL.
-      $('aside.col-sm-3').height($('.main-container.container .col-sm-9').height());
+      if ($('aside.col-sm-3').height() < $('.main-container.container .col-sm-9').height()) {
+        $('aside.col-sm-3').height($('.main-container.container .col-sm-9').height());
+      };
+
+      $('.level-2').parent().addClass('parent-level-2');
+
       // Responsive Images.
       $('.field.field-type-image img, .views-field-field-image img, .content-image img, .big-logo-block img').addClass('img-responsive');
 
@@ -18,12 +31,12 @@
         $ulnav = $li.find('ul.menu.nav');
         if (!$li.hasClass('rb-menu-proccesed')) {
           if ($ulnav) {
-            $ulnav.show('500');
+            $ulnav.show('fast');
             $li.addClass('rb-menu-proccesed');
           };
         }
         else {
-          $ulnav.hide('500');
+          $ulnav.hide('fast');
           $li.removeClass('rb-menu-proccesed');
         }
       });

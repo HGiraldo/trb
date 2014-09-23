@@ -5802,14 +5802,23 @@ section.block-menu {
 
   &#block-system-main-menu {
     border-bottom: 1px solid @AzulMenuBorder;
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
   .block-content {
     li {
+      margin: 0;
       a, span.nolink {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 16px;
         padding-left: 23%;
         font-family: 'proxima_nova_rgregular';
+        color: @Azul;
+        &:hover {
+          background-color: #c6d5df;
+        }
+        &.menu-parent.active-trail {
+          font-family: 'proxima_nova_rgbold';
+        }
       }
       span.nolink {
         padding: 10px 15px;
@@ -5817,19 +5826,19 @@ section.block-menu {
         position: relative;
         display: block;
         cursor: pointer;
-      }
-      :hover {
-        background-color: @HoverMenu;
+        color: @Azul;
       }
       &.expanded {
         .menu.nav {
           display: none;
         }
       }
-      &.active-trail {
-        background-color: @HoverMenu;
+      &.expanded.active-trail {
         .menu.nav {
           display: block;
+          a.active {
+            background-color: @HoverMenu;
+          }
         }
       }
       span.menu-parent:after {
@@ -5842,6 +5851,67 @@ section.block-menu {
           content: url('../images/flecha-desplegar_2.png');
           right: 20%;
           position: absolute;
+        }
+      }
+    }
+    li.expanded {
+      ul.menu.nav {
+        li {
+          a {
+            background: url('../images/circulo-menu.png') no-repeat scroll 15% center transparent;
+          }
+        }
+      }
+    }
+  }
+  &#block-menu-menu-otrasareas {
+    li.expanded {
+      ul.menu.nav {
+        li {
+          a {
+            background: url('../images/circulo-menu.png') no-repeat scroll 3% center transparent;
+            font-size: 14px;
+          }
+          a.active-trail.active {
+            background-color: @HoverMenu;
+          }
+        }
+      }
+    }
+    .parent-level-2 {
+      ul.menu.nav {
+        li {
+          a {
+            background: url('../images/cuadro.png') no-repeat scroll 5% center transparent!important;
+            &.active-trail.active {
+              background-color: @HoverMenu!important;
+            }
+          }
+        }
+      }
+    }
+    a.active-trail.active {
+      background-color: @HoverMenu;
+      font-family: 'proxima_nova_rgbold';
+    }
+    .expanded.active-trail {
+      a.active-trail.active {
+        font-family: 'proxima_nova_rgregular';
+      }
+    }
+    h2 {
+      font-size: 18px;
+      font-family: 'proxima_nova_rgbold';
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      padding-left: 10%;
+      margin-top: 53px;
+    }
+    .block-content {
+      li {
+        a, span.nolink {
+          padding-left: 10%;
         }
       }
     }
@@ -5866,16 +5936,20 @@ body.front {
     text-align: center;
     position: absolute;
     right: 0;
-    top: 59.5%;
+    top: 63.3%;
     border-left: 1px solid @VerdeHover;
     &:hover, &.active {
       .transition(0.5s);
       background-color: @VerdeHover;
     }
+    &.more-ico {
+      background: url('../images/more_h.png') no-repeat scroll 90% center @Verde;
+    }
   }
   div.last-text {
-    font-size: 2em;
+    font-size: 28px;
     padding: 2%;
+    color: @Negro;
   }
   .views-field.views-field-title {
     position: absolute;
@@ -5915,6 +5989,55 @@ body.front {
         border-top: 10px solid @Azul;
         padding-top: 0.5%;
       }
+    }
+  }
+}
+#block-views-news-home-block {
+  margin-bottom: 5%;
+}
+.block.home-programas, .block.home-convocatorias, .block.home-salud {
+  float: left;
+  display: block;
+  width: 100%;
+  .block-content{
+    .image-content, .wrapper {
+      float: left;
+      width: 50%;
+    }
+    .wrapper {
+      .title, .text, .link {
+        padding-left: 3%;
+      }
+      .title {
+        font-family: 'proxima_nova_rgbold';
+        font-size: 26px;
+      }
+      .text, .link {
+        padding-top: 5%;
+      }
+      .title {
+        font-size: 16px;
+      }
+      .link {
+        font-family: 'proxima_nova_rgbold';
+        font-size: 13px;
+      }
+    }
+  }
+  &.right-left {
+    background-color: @AzulMenu;
+  }
+  &.left-right {
+    background-color: @Blanco;
+  }
+  a.rb-external-link {
+    width: 45%;
+    height: 45px;
+    background: url('../images/more.png') no-repeat scroll 90% center @Azul;
+    &:hover {
+      background: url('../images/more.png') no-repeat scroll 90% center @Azul;
+      color: @Azul;
+      background-color: @Verde;
     }
   }
 }
@@ -6026,6 +6149,277 @@ body.not-logged-in {
         font-size: 1em;
         font-family: 'proxima_novalight';
       }
+    }
+  }
+}
+
+
+// ALBUM
+body.node-type-gallery {
+  .album-tumbnails {
+    width: 100%;
+    clear: both;
+    .tumbnail-item {
+      float: left;
+      display: block;
+      padding: 9px;
+    }
+  }
+}
+// ALBUM.
+body.page-album {
+  .download-image {
+    float: right;
+    width: 100%;
+    a {
+      .transition(0.5s);
+      float: right;
+      background: url('../images/download.png') no-repeat scroll right center transparent;
+      padding-right: 20px;
+      margin: 10px 5px 0 0;
+      &:hover {
+        background: url('../images/download_h.png') no-repeat scroll right center transparent;
+        color: @Azul;
+      }
+    }
+  }
+}
+
+// BIBLIOTECA.
+body.page-biblioteca-descargable-presentaciones,
+body.page-biblioteca-descargable-plantillas,
+body.page-biblioteca-descargable-imagenes,
+body.page-biblioteca-descargable-formatos {
+  h1.page-header {
+    padding-left: 5%;
+    margin: 0;
+  }
+  .view-id-biblioteca-repository {
+    width: 100%;
+    li.views-row {
+      float: left;
+      width: 50%;
+      list-style: none;
+      padding: 2%;
+      .body {
+        font-size: 16px;
+        color: @Azul;
+        font-family: 'proxima_nova_rgregular';
+      }
+      h2 {
+        font-size: 18px;
+        font-family: 'proxima_nova_rgbold';;
+      }
+      span.field-content.wrapper-info-file {
+        float: left;
+        background-color: @GrisBody;
+        padding: 5px;
+        min-height: 160px;
+        max-height: 160px;
+        overflow: hidden;
+        .title {
+          min-height: 50px;
+          max-height: 50px;
+          overflow: hidden;
+        }
+        h2 {
+          padding: 0;
+          margin: 10px 0 10px 0;
+        }
+        .body {
+          min-height: 75px;
+          max-height: 75px;
+          overflow: hidden;
+          p {
+            margin: 0;
+          }
+        }
+      }
+      a.download-link {
+        .transition(0.5s);
+        float: right;
+        background: url('../images/download.png') no-repeat scroll right center transparent;
+        padding-right: 20px;
+        margin: 10px 5px 0 0;
+        &:hover {
+          background: url('../images/download_h.png') no-repeat scroll right center transparent;
+          color: @Azul;
+        }
+      }
+    }
+  }
+}
+
+
+// SOCIALES.
+body.page-sociales {
+  h1.page-header {
+    padding-left: 5%;
+    margin: 0;
+  }
+  .view.view-sociales {
+    .view-content {
+      width: 100%;
+      li.views-row {
+        float: left;
+        width: 50%;
+        list-style: none;
+        padding: 2%;
+      }
+      .views-field-title {
+        background: @GrisBody;
+        font-size: 1.6em;
+        padding: 2% 0 2% 0;
+        width: 100%;
+        text-align: center;
+        min-height: 65px;
+        max-height: 65px;
+        a {
+          vertical-align: middle;
+          color: @Azul;
+        }
+      }
+    }
+  }
+}
+
+// DIRECTORIO.
+body.page-directorio {
+  #rb-directory {
+    .data {
+      float: left;
+      width: 100%;
+      ul.list {
+        padding: 0;
+      }
+      .item-ficha {
+        list-style: none;
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #DDDDDD;
+        padding: 0;
+        margin: 0;
+        .name, .cargo, .ext, .mail {
+          float: left;
+          width: 30%;
+          font-size: 15px;
+          color: @Azul;
+          max-height: 50px;
+          min-height: 50px;
+          padding: 10px;
+          overflow: hidden;
+        }
+        .ext {
+          width: 10%;
+        }
+        .name, .cargo, .ext {
+          border-right: 1px solid #DDDDDD;
+        }
+        &.even {
+          background-color: @GrisBody;
+        }
+        &.odd {
+          background-color: @Blanco;
+        }
+      }
+    }
+    .actions {
+      float: left;
+      width: 100%;
+      padding: 5% 0;
+    }
+    .list-header {
+      float: left;
+      width: 100%;
+      background-color: @Azul;
+      height: 55px;
+      .header-item {
+        &.h-name, &.h-cargo, &.h-mail {
+          width: 30%;
+        }
+        &.h-ext {
+          width: 10%;
+        }
+        float: left;
+        text-align: left;
+        padding: 10px;
+        button {
+          color: @Blanco;
+        }
+      }
+    }
+  }
+  input {
+    background-color: @Blanco;
+    height: 55px;
+    width: 100%;
+    border: 1px solid @GrisBody;
+    color: @Azul;
+    font-size: 1.1em;
+    .placeholder(lightness(@Azul));
+    border-radius: 5px;
+    &.error {
+      border: 1px solid rgb(255, 87, 87);
+    }
+  }
+}
+
+// NOTICIAS.
+.view.view-id-rbaldia.al-dia-block, .view.asi-hablando-block {
+  margin-top: 4%;
+  .views-row {
+    margin: 1% 0 4% 0;
+    float: left;
+    display: block;
+    min-height: 130px;
+    max-height: 130px;
+    overflow: hidden;
+    .content-image {
+      float: left;
+      padding-right: 2%;
+    }
+    .content-wrapper-right {
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-family: 'proxima_nova_rgbold';
+        font-size: 19px;
+        a {
+          color: @Azul;
+        }
+      }
+      .title {
+        text-decoration: underline;
+      }
+      .date {
+        font-style: italic;
+        color: @DateColor;
+        font-size: 15px;
+        font-family: 'proxima_novalight';
+      }
+    }
+  }
+}
+.view-id-rbaldia.view-display-id-page,
+.view-asi-se-esta-hablando.view-display-id-page {
+  .content-wrapper-fixed {
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    .title {
+      a {
+        font-family: 'proxima_nova_rgbold';
+        font-size: 34px;
+        color: @Blanco;
+        text-shadow: 1px 1px 3px black;
+      }
+    }
+    .date {
+      font-style: italic;
+      color: @DateColor;
+      font-size: 15px;
+      font-family: 'proxima_novalight';
+      text-shadow: 1px 1px 3px black;
     }
   }
 }

@@ -179,6 +179,7 @@ input[type="file"] {
   padding: 8px 12px;
 }
 .pagination li a {
+  text-transform: uppercase;
   font-weight: bold;
   background-color: #ccd900;
   font-size: 20px;
@@ -190,7 +191,7 @@ input[type="file"] {
   text-align: center;
   display: inline-block;
   border-radius: 0;
-  font-family: 'proxima_novalight';
+  font-family: 'proxima_nova_rgbold';
   margin: 20px 0;
   color: #001e48;
   *display: inline;
@@ -228,12 +229,16 @@ input[type="file"] {
   border-color: #b4d000;
 }
 .pagination li.prev a {
-  width: 150px;
+  width: 170px;
+  padding-left: 38px;
   border-right: 1px solid #f1ff0d;
+  background: url('../images/arrow_l.png') no-repeat scroll 5% center #ccd900;
 }
 .pagination li.next a {
-  width: 150px;
+  width: 170px;
+  padding-right: 38px;
   border-left: 1px solid #f1ff0d;
+  background: url('../images/arrow_r.png') no-repeat scroll 93% center #ccd900;
 }
 body.sidebar-first aside {
   background-color: #dfeaf0;
