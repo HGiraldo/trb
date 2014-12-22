@@ -5991,17 +5991,18 @@ body.front .col-sm-9 {
   margin: 0;
   padding: 0;
 }
+body.front .more-news-div {
+  float: left;
+  width: 30%;
+}
 body.front a.more-news {
-  width: 32%;
+  width: 100%;
   background: #ccd900;
   color: #001e48;
   height: 50px;
-  padding-top: 1.5%;
+  padding: 5%;
   float: left;
   text-align: center;
-  position: absolute;
-  right: 0;
-  top: 27.9%;
   border-left: 1px solid #889d00;
 }
 body.front a.more-news:hover,
@@ -6016,15 +6017,15 @@ body.front a.more-news.more-ico {
   background: url('../images/more_h.png') no-repeat scroll 90% center #ccd900;
 }
 body.front div.last-text {
-  font-size: 28px;
+  font-size: 20px;
   padding: 2%;
   color: #000000;
 }
 body.front .views-field.views-field-title {
   position: absolute;
-  bottom: 19%;
-  left: 10%;
-  font-size: 2em;
+  bottom: 15%;
+  left: 5%;
+  font-size: 25px;
 }
 body.front .views-field.views-field-title a {
   color: #ffffff;
@@ -6316,6 +6317,24 @@ body.not-logged-in.page-user-register form.rb-proccesed .btn-link {
   font-size: 1em;
   font-family: 'proxima_novalight';
 }
+body.not-logged-in.page-user-login #edit-submit-google,
+body.not-logged-in.page-user-password #edit-submit-google,
+body.not-logged-in.page-user-register #edit-submit-google {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-size: 250px;
+  width: 250px;
+  height: 54px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+body.not-logged-in.page-user-login #edit-submit-google:hover,
+body.not-logged-in.page-user-password #edit-submit-google:hover,
+body.not-logged-in.page-user-register #edit-submit-google:hover {
+  background-color: rgba(223, 74, 50, 0.43);
+}
 body.node-type-gallery .album-tumbnails {
   width: 100%;
   clear: both;
@@ -6556,11 +6575,13 @@ body.page-directorio input.error {
   border: 1px solid #ff5757;
 }
 .view.view-id-rbaldia.al-dia-block,
-.view.asi-hablando-block {
+.view.asi-hablando-block,
+.view.view-newsflash.newsflash-block {
   margin-top: 4%;
 }
 .view.view-id-rbaldia.al-dia-block .views-row,
-.view.asi-hablando-block .views-row {
+.view.asi-hablando-block .views-row,
+.view.view-newsflash.newsflash-block .views-row {
   margin: 1% 0 4% 0;
   float: left;
   display: block;
@@ -6569,50 +6590,64 @@ body.page-directorio input.error {
   overflow: hidden;
 }
 .view.view-id-rbaldia.al-dia-block .views-row .content-image,
-.view.asi-hablando-block .views-row .content-image {
+.view.asi-hablando-block .views-row .content-image,
+.view.view-newsflash.newsflash-block .views-row .content-image {
   float: left;
   padding-right: 2%;
 }
 .view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right h2,
-.view.asi-hablando-block .views-row .content-wrapper-right h2 {
+.view.asi-hablando-block .views-row .content-wrapper-right h2,
+.view.view-newsflash.newsflash-block .views-row .content-wrapper-right h2 {
   margin: 0;
   padding: 0;
   font-family: 'proxima_nova_rgbold';
   font-size: 19px;
 }
 .view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right h2 a,
-.view.asi-hablando-block .views-row .content-wrapper-right h2 a {
+.view.asi-hablando-block .views-row .content-wrapper-right h2 a,
+.view.view-newsflash.newsflash-block .views-row .content-wrapper-right h2 a {
   color: #001e48;
 }
 .view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right .title,
-.view.asi-hablando-block .views-row .content-wrapper-right .title {
+.view.asi-hablando-block .views-row .content-wrapper-right .title,
+.view.view-newsflash.newsflash-block .views-row .content-wrapper-right .title {
   text-decoration: underline;
 }
 .view.view-id-rbaldia.al-dia-block .views-row .content-wrapper-right .date,
-.view.asi-hablando-block .views-row .content-wrapper-right .date {
+.view.asi-hablando-block .views-row .content-wrapper-right .date,
+.view.view-newsflash.newsflash-block .views-row .content-wrapper-right .date {
   font-style: italic;
   color: #b9b9b9;
-  font-size: 15px;
+  font-size: 13px;
   font-family: 'proxima_novalight';
 }
-.view-id-rbaldia.view-display-id-page .content-wrapper-fixed,
-.view-asi-se-esta-hablando.view-display-id-page .content-wrapper-fixed {
-  position: absolute;
-  top: 38%;
-  left: 10%;
+.view-id-rbaldia.view-display-id-page .content-image,
+.view-asi-se-esta-hablando.view-display-id-page .content-image,
+.view-newsflash.view-display-id-page .content-image {
+  position: relative;
 }
-.view-id-rbaldia.view-display-id-page .content-wrapper-fixed .title a,
-.view-asi-se-esta-hablando.view-display-id-page .content-wrapper-fixed .title a {
+.view-id-rbaldia.view-display-id-page .content-image .content-wrapper-fixed,
+.view-asi-se-esta-hablando.view-display-id-page .content-image .content-wrapper-fixed,
+.view-newsflash.view-display-id-page .content-image .content-wrapper-fixed {
+  position: absolute;
+  width: 91%;
+  bottom: 8%;
+  left: 3%;
+}
+.view-id-rbaldia.view-display-id-page .content-image .content-wrapper-fixed .title a,
+.view-asi-se-esta-hablando.view-display-id-page .content-image .content-wrapper-fixed .title a,
+.view-newsflash.view-display-id-page .content-image .content-wrapper-fixed .title a {
   font-family: 'proxima_nova_rgbold';
-  font-size: 34px;
+  font-size: 25px;
   color: #ffffff;
   text-shadow: 1px 1px 3px black;
 }
-.view-id-rbaldia.view-display-id-page .content-wrapper-fixed .date,
-.view-asi-se-esta-hablando.view-display-id-page .content-wrapper-fixed .date {
+.view-id-rbaldia.view-display-id-page .content-image .content-wrapper-fixed .date,
+.view-asi-se-esta-hablando.view-display-id-page .content-image .content-wrapper-fixed .date,
+.view-newsflash.view-display-id-page .content-image .content-wrapper-fixed .date {
   font-style: italic;
   color: #b9b9b9;
-  font-size: 15px;
+  font-size: 13px;
   font-family: 'proxima_novalight';
   text-shadow: 1px 1px 3px black;
 }

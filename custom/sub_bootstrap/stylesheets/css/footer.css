@@ -16,7 +16,7 @@ footer.footer .region {
 .block.rb-phone {
   width: 50%;
   float: left;
-  left: 5%;
+  padding-left: 3%;
 }
 .block.rb-phone .ico-tel {
   float: left;
@@ -24,8 +24,8 @@ footer.footer .region {
 }
 .block.rb-phone .ico-tel svg {
   fill: #ccd900;
-  width: 50px;
-  height: 40px;
+  width: 40px;
+  height: 35px;
 }
 .block.rb-phone .ico-tel svg:hover {
   fill: #ffffff;
@@ -41,7 +41,7 @@ footer.footer .region {
 .block.rb-phone .phone-number a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 2.4em;
+  font-size: 25px;
 }
 .block.rb-phone .phone-number a:hover {
   -webkit-transition: all 0.3s ease-out;
@@ -54,11 +54,11 @@ footer.footer .region {
   float: right;
   text-align: right;
   width: 30%;
-  right: 5%;
+  padding-right: 3%;
 }
 .block.rb-social .block-content .text {
   color: #ffffff;
-  font-size: 2em;
+  font-size: 25px;
   float: right;
   padding-top: 3px;
 }
@@ -66,8 +66,8 @@ footer.footer .region {
   float: right;
 }
 .block.rb-social .block-content .icons svg {
-  width: 50px;
-  height: 40px;
+  width: 40px;
+  height: 35px;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .block.rb-social span {

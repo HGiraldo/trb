@@ -5926,17 +5926,18 @@ body.front {
     margin: 0;
     padding: 0;
   }
+  .more-news-div {
+    float: left;
+    width: 30%;
+  }
   a.more-news {
-    width: 32%;
+    width: 100%;
     background: @Verde;
     color: @Azul;
     height: 50px;
-    padding-top: 1.5%;
+    padding: 5%;
     float: left;
     text-align: center;
-    position: absolute;
-    right: 0;
-    top: 63.3%;
     border-left: 1px solid @VerdeHover;
     &:hover, &.active {
       .transition(0.5s);
@@ -5947,15 +5948,15 @@ body.front {
     }
   }
   div.last-text {
-    font-size: 28px;
+    font-size: 20px;
     padding: 2%;
     color: @Negro;
   }
   .views-field.views-field-title {
     position: absolute;
-    bottom: 19%;
-    left: 10%;
-    font-size: 2em;
+    bottom: 15%;
+    left: 5%;
+    font-size: 25px;
     a {
       color: @Blanco;
       text-shadow: 1px 1px 3px black;
@@ -6148,6 +6149,17 @@ body.not-logged-in {
         margin-top: 7%;
         font-size: 1em;
         font-family: 'proxima_novalight';
+      }
+    }
+    #edit-submit-google {
+      .transition(0.2s);
+      background-size: 250px;
+      width: 250px;
+      height: 54px;
+      border-radius: 5px;
+      background-color: transparent;
+      &:hover {
+        background-color: rgba(223, 74, 50, 0.43);
       }
     }
   }
@@ -6365,7 +6377,9 @@ body.page-directorio {
 }
 
 // NOTICIAS.
-.view.view-id-rbaldia.al-dia-block, .view.asi-hablando-block {
+.view.view-id-rbaldia.al-dia-block,
+.view.asi-hablando-block,
+.view.view-newsflash.newsflash-block {
   margin-top: 4%;
   .views-row {
     margin: 1% 0 4% 0;
@@ -6394,32 +6408,38 @@ body.page-directorio {
       .date {
         font-style: italic;
         color: @DateColor;
-        font-size: 15px;
+        font-size: 13px;
         font-family: 'proxima_novalight';
       }
     }
   }
 }
+
 .view-id-rbaldia.view-display-id-page,
-.view-asi-se-esta-hablando.view-display-id-page {
-  .content-wrapper-fixed {
-    position: absolute;
-    top: 38%;
-    left: 10%;
-    .title {
-      a {
-        font-family: 'proxima_nova_rgbold';
-        font-size: 34px;
-        color: @Blanco;
+.view-asi-se-esta-hablando.view-display-id-page,
+.view-newsflash.view-display-id-page {
+  .content-image {
+    position: relative;
+    .content-wrapper-fixed {
+      position: absolute;
+      width: 91%;
+      bottom: 8%;
+      left: 3%;
+      .title {
+        a {
+          font-family: 'proxima_nova_rgbold';
+          font-size: 25px;
+          color: @Blanco;
+          text-shadow: 1px 1px 3px black;
+        }
+      }
+      .date {
+        font-style: italic;
+        color: @DateColor;
+        font-size: 13px;
+        font-family: 'proxima_novalight';
         text-shadow: 1px 1px 3px black;
       }
-    }
-    .date {
-      font-style: italic;
-      color: @DateColor;
-      font-size: 15px;
-      font-family: 'proxima_novalight';
-      text-shadow: 1px 1px 3px black;
     }
   }
 }
